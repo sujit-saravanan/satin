@@ -5,8 +5,8 @@ input:
 ```html
 def macro_name(parameter1, parameter2, parameter3){
     <div class="$$parameter1"> this is $$parameter1 </div>
-    <div class="$$parameter2"> this is $$parameter2  </div>
-    <div class="$$parameter3"> this is $$parameter3  </div>
+    <div class="$$parameter2"> this is $$parameter2 </div>
+    <div class="$$parameter3"> this is $$parameter3 </div>
 }
 
 <!DOCTYPE html>
@@ -34,12 +34,12 @@ output:
 </head>
 <body>
 <div class="a"> this is a </div>
-<div class="b"> this is b  </div>
-<div class="c"> this is c  </div>
+<div class="b"> this is b </div>
+<div class="c"> this is c </div>
 
 <div class="there are spaces here"> this is there are spaces here </div>
 <div class="there|are|special|characters|here"> this is there|are|special|characters|here </div>
-<div class="You should use curly braces for inputs that aren't a single, continous word"> this is You should use curly braces for inputs that aren't a single, continous word  </div>
+<div class="You should use curly braces for inputs that aren't a single, continous word"> this is You should use curly braces for inputs that aren't a single, continous word </div>
 </body>
 ```
 
