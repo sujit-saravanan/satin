@@ -44,5 +44,7 @@ output:
 ```
 
 Potential improvements that could be made:
-1. As of right now, the code lexes the file input into tokens, then parses the tokens twice. One to obtain all of the macros, and another time to obtain all of the macro calls(instances). This could potentially be streamlined into a single pass, however it would be at the cost of having to disambiguate the instance grammar, which would reduce the simplicity of the syntax.
+1. As of right now, the code lexes the file input into tokens, then parses the tokens twice. Once to obtain all of the macros, and another time to obtain all of the macro calls(instances). This could potentially be streamlined into a single pass, however it would be at the cost of having to disambiguate the instance grammar, which would reduce the simplicity of the syntax.
 2. There are several places where vectors are used that a map could potentially be more suitable, however some napkin math indicates that for smaller inputs, the cache locality of iterating over a vector heavily beats out the O(1) access times of an unordered map.
+3. There may be a need to support the asynchronous building of multiple satin files at once, however such a feature would be better suited for an actual build system rather than a simple commandline script. It would most likely be a seperate project.
+4. As of right now, you have to repeat common macros between files for every file. In the future, a seperate macro file that can be imported could be an interesting feature to add.
