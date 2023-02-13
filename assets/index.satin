@@ -1,0 +1,39 @@
+def     icon( icon_name, texture_path ){
+<div class="icon_container" onclick="icon_onclick(this)">
+            <img class="icon_image" src="$$texture_path" alt="$$icon_name" draggable="false">
+            <div class="selection-effect" style="--icon-image: url(&quot;$$texture_path&quot;);"></div>
+            <p class="icon_name">$$icon_name</p>
+        </div>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="main.js" as="script">
+
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="icon" type="image/x-icon" href="assets/textures/opti/windows.png">
+    <title></title>
+</head>
+
+<body onclick="clear_selected_icons()">
+    <div class="icon_grid">
+        icon (Resume, {assets/textures/opti/document.png})
+        icon  (Projects, {assets/textures/opti/folder_with_content.png})
+        icon ({Contact Me}, {assets/textures/opti/mailbox_world.png})
+        icon   (Help, {assets/textures/opti/help_book.png})
+    </div>
+    <div id="taskbar">
+        <button>hi</button>
+    </div>
+
+    <script src="main.js" defer></script>
+
+</body>
+
+</html>
